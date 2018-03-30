@@ -1,0 +1,20 @@
+#include "stdafx.h"
+#include <iostream>
+#include <fstream>
+#include <string>
+
+using namespace std;
+
+int main(void)
+{
+	ofstream out("test.txt", ios::app);
+
+	string s;
+	if (out.is_open()) {
+		out << "´õÀÖÁö·Õ!!!!";
+	}
+
+
+
+	return 0;
+} 

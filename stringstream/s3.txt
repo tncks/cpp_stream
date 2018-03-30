@@ -1,0 +1,23 @@
+#include "stdafx.h"
+#include <iostream>
+#include <sstream>
+
+using namespace std;
+
+string to_str(int x)
+{
+	ostringstream ss;
+	ss << x;
+
+	return ss.str();
+}
+
+
+	int main(void) {
+		
+		string hi = to_str(1 + 2);
+		cout << "문자열로 변환: 1+2 = " <<  hi << endl;
+		cout << sizeof(hi);
+
+		return 0;
+	}

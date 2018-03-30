@@ -1,0 +1,40 @@
+#include "stdafx.h"
+#include <iostream>
+#include <fstream>
+#include <string>
+
+using namespace std;
+
+class Human {
+
+	string name;
+	int age;
+
+public:
+	Human(const string& name, int age) : name(name), age(age) {
+	}
+	string get_info()
+	{
+		return "Name::" + name + " / Age::" + to_string(age);
+	}
+
+	friend ofstream& operator << (ofstream& o, Human& h);
+}
+
+ofstream& operator << (ofstream& o, Human& h)
+{
+	o << h.get_info();
+	return o;
+}
+
+
+
+	int main(void) {
+
+		ofstream out("test.txt");
+		
+		Huamn h("°¨»çÇØ", 30);
+		out << h << endl;
+		return 0;
+
+	}

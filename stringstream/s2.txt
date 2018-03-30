@@ -1,0 +1,23 @@
+#include "stdafx.h"
+#include <iostream>
+#include <sstream>
+
+using namespace std;
+
+double to_number(string s)
+{
+	istringstream ss(s);
+
+	double x;
+
+	ss >> x;
+	return x;
+}
+
+
+	int main(void) {
+
+		cout << "º¯È¯ : 1 + 2 = " << to_number("1") + to_number("2") << endl;
+
+		return 0;
+	}
